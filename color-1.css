@@ -1,0 +1,64 @@
+:root {
+    --skin-color: #ec1839;
+  }
+  
+  .aside .logo a::before {
+    border-top: 4px solid var(--skin-color);
+    border-left: 4px solid var(--skin-color);
+  }
+  
+  .aside .logo a::after {
+    border-right: 4px solid var(--skin-color);
+    border-bottom: 4px solid var(--skin-color);
+  }
+  
+  .aside .nav li a:hover,
+  .aside .nav li a.active {
+    color: var(--skin-color);
+  }
+  
+  .home-img::after {
+    border-bottom: 10px solid var(--skin-color);
+  }
+  
+  .home-img::before {
+    border-top: 10px solid var(--skin-color);
+  }
+  
+  .service-item .service-item-inner .icon {
+    color: var(--skin-color);
+  }
+  
+  .section-title h2::before {
+    background-color: var(--skin-color);
+  }
+  
+  .section-title h2::after {
+    background-color: var(--skin-color);
+  }
+  
+  .home-info .btn,
+  .btn {
+    background-color: var(--skin-color);
+  }
+  
+  .info-item p span {
+    color: var(--skin-color);
+  }
+  
+  .portfolio-item-inner .portfolio-img img:hover {
+    transform: scale(1.1);
+    border-color: var(--skin-color);
+  }
+  
+  .contact .contact-info-item .icon {
+    color: var(--skin-color);
+  }
+  
+  .contact-form .form-item .form-control:focus {
+    border-color: var(--skin-color);
+  }
+  
+  .style-switcher .colors span.color-1 {
+    background-color: #ec1839;
+  }

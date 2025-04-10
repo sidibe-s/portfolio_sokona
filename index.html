@@ -1,49 +1,456 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Sokona Sidibé</title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="color-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+
+    <!-- Fichiers CSS alternatifs -->
+    <link rel="stylesheet" href="color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="color-5.css" class="alternate-style" title="color-5" disabled>
+    <link rel="stylesheet" href="style-switcher.css">
+
 </head>
+
 <body>
-    <header>
-        <h1>Bienvenue sur mon portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#profil">Mon Profil</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#competences">Mes Compétences</a></li>
-                <li><a href="#contact">Me Contacter</a></li>
+    <!-- Main Container Début-->
+    <div class="main-conatiner">
+        <!-- Côté Début-->
+
+        <div class="aside">
+            <div class="logo">
+                <a href="#"><span>S</span>idibé</a>
+            </div>
+            <div class="nav-toggler">
+                <span>
+
+                </span>
+            </div>
+            <ul class="nav">
+                <li><a href="#accueil" class="active"><i class="fa fa-home"></i>Accueil</a></li>
+                <li><a href="#profil"><i class="fa fa-user"></i>Profil</a></li>
+                <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+                <li><a href="#competences"><i class="fa fa-list"></i>Compétences</a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+        <!-- Côté Fin-->
+        <!-- Main Content Début -->
+        <div class="main-content">
+            <!-- Accueil section Début-->
+            <Section class="accueil section" id="accueil">
+                <div class="container">
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h2>Sokona
+                                Sidibé</h2>
+                            <h3 class="profession">Je suis <span class="typing"> étudiante en BTS SIO et à la recherche
+                                    d'un stage </span></h3>
 
-    <section id="profil">
-        <h2>Mon Profil</h2>
-        <p>Présentation rapide de toi.</p>
-    </section>
 
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Liste de tes projets.</p>
-    </section>
+                            <p>Etudiante en première année
+                                de BTS SIO, je suis
+                                passionnée par le
+                                développement informatique
+                                et désireuse d’acquérir de
+                                l’expérience pratique au sein
+                                d’une équipe dynamique.
+                            </p>
 
-    <section id="competences">
-        <h2>Mes Compétences</h2>
-        <p>Technos que tu maîtrises.</p>
-    </section>
 
-    <section id="contact">
-        <h2>Me Contacter</h2>
-        <form>
-            <input type="text" placeholder="Nom" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
 
+
+                        </div>
+                        <div class="home-img padd-15">
+                            <img src="profil.jpg" alt="Ma photo de profil">
+                        </div>
+                    </div>
+                </div>
+            </Section>
+            <!-- Accueil section Fin-->
+            <!-- Profil section Début-->
+            <section class="profil section" id="profil">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Profil</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="about-content padd-15">
+                            <div class="row">
+                                <div class="info-personnelle padd-15">
+                                    <div class="row">
+                                        <div class="info-item padd-15">
+                                            <!-- <p>Email : <span>sidibe-s@saint-louis29.net</span></p> -->
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <!-- <p>Téléphone : <span>06 61 17 70 68</span></p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="competences padd-15">
+                                    <div class="row">
+                                        <div class="skill-item padd-15">
+                                            <!-- <h5>JS</h5> -->
+                                            <div class="progress">
+                                                <!-- <div class="progress-in" style="width: 86%;"></div>
+                                                <div class="skill-percent">86%</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <!-- <h5>PHP</h5> -->
+                                            <div class="progress">
+                                                <!-- <div class="progress-in" style="width: 66%;"></div>
+                                                <div class="skill-percent">66%</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <!-- <h5>HTML</h5> -->
+                                            <div class="progress">
+                                                <!-- <div class="progress-in" style="width: 96%;"></div>
+                                                <div class="skill-percent">96%</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <!-- <h5>Bootstrap</h5> -->
+                                            <div class="progress">
+                                                <!-- <div class="progress-in" style="width: 76%;"></div>
+                                                <div class="skill-percent">76%</div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="parcours padd-15">
+                                    <h3 class="title">Parcours Scolaire</h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadox-dark">
+                                                <!-- Parcours item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2025
+                                                    </h3>
+                                                    <h4 class="timeline-title">BTS SIO</h4>
+                                                    <p class="timeline-text">Le BTS SIO option SLAM forme à la gestion
+                                                        de services informatiques, à la cybersécurité et au
+                                                        développement d'applications.</p>
+                                                    <p> Saint Louis, Châteaulin</p>
+                                                    <p>France</p>
+                                                </div>
+
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2024
+                                                    </h3>
+                                                    <h4 class="timeline-title">IRT(Informatique, Réseaux et
+                                                        Télécommunications)</h4>
+                                                    <p class="timeline-text">La licence IRT a pour objectif de former
+                                                        des professionnels capables de concevoir et administrer des
+                                                        réseaux ainsi que de développer des applications informatiques.
+                                                    </p>
+                                                    <p> ITMA(Institut Africain de Technologie et de Management)</p>
+                                                    <p>Bamako, Mali</p>
+                                                </div>
+
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2023
+                                                    </h3>
+                                                    <h4 class="timeline-title">Baccalauréat Général</h4>
+                                                    <p class="timeline-text">Option Série Sciences Exactes.</p>
+                                                    <p> La Claire Fontaine</p>
+                                                    <p>Bamako, Mali</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="buttons padd-15">
+                                                <a href="CV Sidibe_Sokona.pdf" class="btn">Télécharger CV </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience padd-15">
+                                    <h3 class="title">Expériences</h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadox-dark">
+                                                <!-- Parcours item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2020 - 2022
+                                                    </h3>
+                                                    <h4 class="timeline-title">Membre de l'AMAVEC</h4>
+                                                    <p class="timeline-text">L'association pour l'environnement,
+                                                        l'assainissement et pour un meileur cadre de vie a pour objectif
+                                                        de protéger m'environnement, promouvoir le recyclage,
+                                                        sensibiliser la population à l'hygiène, améliorer le cadre de
+                                                        vie, organiser des actions de nettoyage et d'assainissement mais
+                                                        aussi former et mobiliser les citoyens surtout les jeunes,
+                                                        autour des enjeux écologiques.</p>
+                                                    <p>Bamako, Mali</p>
+                                                </div>
+
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2024
+                                                    </h3>
+                                                    <h4 class="timeline-title"> Bénévole</h4>
+                                                    <p class="timeline-text">
+                                                        Dans le cadre de mon engagement solidaire, j'ai participé à la
+                                                        distribution de nourriture aux personnes démunies.
+                                                        Les objectifs étaient de lutter contre la faim en apportant une
+                                                        aide alimentaire directe, en soutenant les populations
+                                                        vulnérables avec dignité et bienveillance et en contribuant à la
+                                                        réduction du gaspillage alimentaire en valorisant les dons.
+                                                    </p>
+                                                    <p>Bamako, Mali</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Profil section Fin-->
+            <!-- Portfolio Début -->
+            <section class="portfolio section" id="portfolio">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Portfolio</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="portfolio-heading padd-15">
+                            <h2>Projets</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Portfolio item Début -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+
+                                    <a href="salac.pdf" alt="Projet salac" target="_blank" class="projet-img">
+                                        <img src="ampere.png" alt="Projet 2025">
+                                    </a>
+                                    <h3>SALAC</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Portfolio item Fin -->
+                        <!-- Portfolio item Début -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <a href="kss.pdf" alt="Projet salac" target="_blank" class="projet-img">
+                                        <img src="kss.png" alt="Projet 2024">
+                                    </a>
+                                    <h3>KSS DESIGN</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Portfolio item Fin -->
+                    </div>
+                </div>
+            </section>
+            <!-- Portfolio Fin -->
+            <!-- Compétences section Début -->
+            <section class="competences section" id="competences">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Compétences</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Compétences item Début-->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-file-code"></i>
+                                </div>
+                                <h4>Langages</h4>
+                                <p>PHP, Python, Javascript</p>
+                            </div>
+                        </div>
+                        <!-- Compétences item Fin-->
+                        <!-- Compétences item Début-->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-globe-americas"></i>
+                                </div>
+                                <h4>Langages Web</h4>
+                                <p>HTML, CSS, Bootstrap</p>
+                            </div>
+                        </div>
+                        <!-- Compétences item Fin-->
+                        <!-- Compétences item Début-->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-cogs"></i>
+                                </div>
+                                <h4>Logiciels</h4>
+                                <p>VS Code, Packet Tracer, VirtualBox</p>
+                            </div>
+                        </div>
+                        <!-- Compétences item Fin-->
+                        <!-- Compétences item Début-->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-laptop-code"></i>
+                                </div>
+                                <h4>Système</h4>
+                                <p>Windows, Linux</p>
+                            </div>
+                        </div>
+                        <!-- Compétences item Fin-->
+                        <!-- Compétences item Début-->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-shield-alt"></i>
+                                </div>
+                                <h4>Cybersécurité</h4>
+                                <p>PIA, RGPD, ANSII, CNIL</p>
+                            </div>
+                        </div>
+                        <!-- Compétences item Fin-->
+                        <!-- Compétences item Début-->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-database"></i>
+                                </div>
+                                <h4>Data</h4>
+                                <p>SQL, XML, XSL, Json</p>
+                            </div>
+                        </div>
+                        <!-- Compétences item Fin-->
+                    </div>
+                </div>
+            </section>
+            <!-- Compétences section Fin -->
+            <!-- Contact section Début -->
+            <section class="contact section" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Contact</h2>
+                        </div>
+                    </div>
+                    <h3 class="contact-title padd-15"> Avez-vous des questions ?</h3>
+                    <h4 class="contact-sub-title padd-15">Je suis à votre service</h4>
+                    <div class="row">
+                        <!-- Contact info item Début -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-phone"></i></div>
+                            <h4>Contactez-moi au</h4>
+                            <p>+33 6 61 17 70 68</p>
+                        </div>
+                        <!-- Contact info item Fin -->
+                        <!-- Contact info item Début -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-envelope"></i></div>
+                            <h4>Email</h4>
+                            <p>sidibe-s@saint-louis29.net</p>
+                        </div>
+                        <!-- Contact info item Fin -->
+                    </div>
+                    <h3 class="contact-title padd-15"> Envoyez-moi un email</h3>
+                    <!-- <h4 class="contact-sub-title padd-15">Je suis à votre service</h4> -->
+                    <!-- Formulaire Contact Début -->
+                    <div class="row">
+                        <div class="contact-form padd-15">
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Nom">
+                                    </div>
+                                </div>
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Message">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn">Envoyer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Formulaire Contact Fin -->
+                </div>
+            </section>
+            <!-- Contact section Fin -->
+        </div>
+        <!-- Main Content Fin -->
+
+    </div>
+    <!-- Main Container Fin-->
+    <!-- Style Switcher Début -->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas fa-cog fa-moon"></i>
+        </div>
+        <h4>Couleurs</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!-- Style Switcher Fin -->
+
+    <!-- Fichier JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
+    <script src="style-switcher.js"></script>
+
 </body>
+
 </html>
