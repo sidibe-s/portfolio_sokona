@@ -18,7 +18,7 @@ body {
     background-color: var(--bg-black-900);
     color: var(--text-black-900);
     transition: all 0.3s ease;
-    
+
 }
 
 * {
@@ -511,71 +511,91 @@ ul {
 }
 
 /* Competences */
-.competences .container {
-    padding-bottom: 40px;
+.competences-section {
+    padding-top: 30px;
+    padding-bottom: 70px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Pour bien espacer les items */
-    gap: 30px; 
+    align-items: center;
+    min-height: 100vh;
 }
 
-.competences .service-item {
+.service-item {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
     margin-bottom: 30px;
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+    display: flex;
 }
 
-.competences .service-item .service-item-inner {
-    background-color: var(--bg-black-100);
+.service-item-inner {
+    background: var(--bg-black-100);
     border: 1px solid var(--bg-black-50);
-    padding: 30px 15px;
+    border-radius: 10px;
+    padding: 40px 20px;
     text-align: center;
-    transition: all 0.35s ease;
-}
-
-.competences .service-item .service-item-inner:hover {
-    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
-}
-
-.competences .service-item .service-item-inner .icon {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 30px;
-    text-align: center;
-}
-
-.competences .service-item .service-item-inner .icon .fa {
-    font-size: 40px;
-    line-height: 60px;
-    color: var(--skin-color);
     transition: all 0.3s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 280px;
+    height: 100%;
 }
 
-.competences .service-item .service-item-inner:hover .icon {
-    background: var(--skin-color);
+.service-item-inner:hover {
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+    transform: translateY(-5px);
 }
 
-.competences .service-item .service-item-inner:hover .icon .fa {
-    font-size: 25px;
-    color: #ffffff;
+.service-item-inner .icon {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    background-color: var(--bg-black-50);
 }
 
-.competences .service-item .service-item-inner h4 {
-    font-size: 18px;
+.service-item-inner .icon i {
+    font-size: 35px;
+    color: var(--text-black-900);
+}
+
+.service-item-inner h4 {
+    font-size: 20px;
     margin-bottom: 15px;
     color: var(--text-black-900);
     font-weight: 700;
     text-transform: capitalize;
 }
 
-.competences .service-item .service-item-inner p {
+.service-item-inner p {
     font-size: 16px;
     color: var(--text-black-700);
-    line-height: 25px;
+    line-height: 1.6;
+    margin: 0;
 }
 
+/* Responsive spécifique à la section compétences */
+@media (max-width: 991px) {
+    .service-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .service-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .service-item-inner {
+        min-height: 250px;
+        padding: 30px 15px;
+    }
+}
 
 /* CONTACT */
 .contact.section {
@@ -689,11 +709,11 @@ ul {
 
     .contact-info-item,
     .portfolio-item,
-    .service-item,
+    .competences,
+    /* Changé de .service-item à .competences */
     .parcours,
     .experience,
-    .info-personnelle,
-    .competences {
+    .info-personnelle {
         flex: 0 0 100%;
         max-width: 100%;
     }
