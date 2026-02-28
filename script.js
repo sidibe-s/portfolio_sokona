@@ -18,7 +18,7 @@ function asideToggle() {
 // Typing animation
 if (document.querySelector(".typing")) {
   var typed = new Typed(".typing", {
-    strings: ["étudiante en BTS SIO", "à la recherche d'un stage"],
+    strings: ["étudiante en BTS SIO", "à la recherche d'une alternance"],
     typeSpeed: 100,
     BackSpeed: 60,
     loop: true,
