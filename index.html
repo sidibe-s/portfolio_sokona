@@ -1,69 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Site Sokona</title>
+    <title>Portfolio – Sokona Sidibé</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
-
     <!-- Fichiers CSS alternatifs -->
     <link rel="stylesheet" href="color-4.css" class="alternate-style" title="color-4">
 </head>
 
 <body>
-    <!-- Main Container Début-->
-    <div class="main-conatiner">
-        <!-- Côté Début-->
+    <!-- Main Container Début -->
+    <div class="main-container">
 
+        <!-- Sidebar Début -->
         <div class="aside">
             <div class="logo">
                 <a href="#"><span>S</span>idibé</a>
             </div>
             <div class="nav-toggler">
-                <span>
-
-                </span>
+                <span></span>
             </div>
             <ul class="nav">
                 <li><a href="#accueil" class="active"><i class="fa fa-home"></i>Accueil</a></li>
                 <li><a href="#profil"><i class="fa fa-user"></i>Profil</a></li>
                 <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
                 <li><a href="#competences"><i class="fa fa-list"></i>Compétences</a></li>
+                <li><a href="#certifications"><i class="fa fa-certificate"></i>Certifications</a></li>
+                <li><a href="#recommandations"><i class="fa fa-star"></i>Recommandations</a></li>
                 <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
             </ul>
         </div>
-        <!-- Côté Fin-->
+        <!-- Sidebar Fin -->
+
         <!-- Main Content Début -->
         <div class="main-content">
-            <!-- Accueil section Début-->
-            <Section class="accueil section" id="accueil">
+
+            <!-- ===== ACCUEIL ===== -->
+            <section class="accueil section" id="accueil">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
-                            <h2>Sokona
-                                Sidibé</h2>
-                            <h3 class="profession">Je suis <span class="typing"> étudiante en BTS SIO</span></h3>
-                            <p>Etudiante en deuxième année
-                                de BTS SIO option SLAM, je suis
-                                passionnée par le
-                                développement informatique
-                                et désireuse d’acquérir de
-                                l’expérience pratique au sein
-                                d’une équipe dynamique.
+                            <h2>Sokona Sidibé</h2>
+                            <h3 class="profession">Je suis <span class="typing"></span></h3>
+                            <p>Étudiante en deuxième année de BTS SIO option SLAM, je suis
+                                passionnée par le développement informatique
+                                et désireuse d'acquérir de l'expérience pratique au sein
+                                d'une équipe dynamique.
                             </p>
+                            <div class="alternance-badge">
+                                <span class="alternance-dot"></span>
+                                <div class="alternance-text">
+                                    <strong>Recherche d'alternance</strong>
+                                    <span>Disponible à partir de septembre 2026</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="home-img padd-15">
-                            <img src="profil.jpg" alt="Ma photo de profil">
+                            <img src="profil.jpg" alt="Photo de profil de Sokona Sidibé">
                         </div>
                     </div>
                 </div>
-            </Section>
-            <!-- Accueil section Fin-->
-            <!-- Profil section Début-->
+            </section>
+
+            <!-- ===== PROFIL ===== -->
             <section class="profil section" id="profil">
                 <div class="container">
                     <div class="row">
@@ -86,44 +90,17 @@
                                 </div>
                                 <div class="competences padd-15">
                                     <div class="row">
-                                        <div class="skill-item padd-15">
-                                            <!-- <h5>JS</h5> -->
-                                            <div class="progress">
-                                                <!-- <div class="progress-in" style="width: 86%;"></div>
-                                                <div class="skill-percent">86%</div> -->
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <!-- <h5>PHP</h5> -->
-                                            <div class="progress">
-                                                <!-- <div class="progress-in" style="width: 66%;"></div>
-                                                <div class="skill-percent">66%</div> -->
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <!-- <h5>HTML</h5> -->
-                                            <div class="progress">
-                                                <!-- <div class="progress-in" style="width: 96%;"></div>
-                                                <div class="skill-percent">96%</div> -->
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <!-- <h5>Bootstrap</h5> -->
-                                            <div class="progress">
-                                                <!-- <div class="progress-in" style="width: 76%;"></div>
-                                                <div class="skill-percent">76%</div> -->
-                                            </div>
-                                        </div>
+                                        <!-- Barres de compétences commentées intentionnellement -->
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
+                                <!-- Parcours Scolaire -->
                                 <div class="parcours padd-15">
                                     <h3 class="title">Parcours Scolaire</h3>
                                     <div class="row">
                                         <div class="timeline-box padd-15">
-                                            <div class="timeline shadox-dark">
-                                                <!-- Parcours item -->
+                                            <div class="timeline shadow-dark">
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
@@ -133,10 +110,9 @@
                                                     <p class="timeline-text">Le BTS SIO option SLAM forme à la gestion
                                                         de services informatiques, à la cybersécurité et au
                                                         développement d'applications.</p>
-                                                    <p> Saint Louis, Châteaulin</p>
+                                                    <p>Saint Louis, Châteaulin</p>
                                                     <p>France</p>
                                                 </div>
-
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
@@ -147,10 +123,9 @@
                                                         des professionnels capables de concevoir et administrer des
                                                         réseaux ainsi que de développer des applications informatiques.
                                                     </p>
-                                                    <p> ITMA</p>
+                                                    <p>ITMA</p>
                                                     <p>Bamako, Mali</p>
                                                 </div>
-
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
@@ -158,55 +133,52 @@
                                                     </h3>
                                                     <h4 class="timeline-title">Baccalauréat Général</h4>
                                                     <p class="timeline-text">Option Série Sciences Exactes.</p>
-                                                    <p> La Claire Fontaine</p>
+                                                    <p>La Claire Fontaine</p>
                                                     <p>Bamako, Mali</p>
                                                 </div>
-
                                             </div>
-
-                                        </div>
-                                        <div class="row">
-                                            <div class="buttons padd-15">
-                                                <a href="CV_Sidibe_Sokona.pdf" class="btn">Télécharger CV </a>
+                                            <div class="row">
+                                                <div class="buttons padd-15">
+                                                    <a href="CV_Sidibe_Sokona.pdf" class="btn"
+                                                        target="_blank">Télécharger CV</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Expériences -->
                                 <div class="experience padd-15">
                                     <h3 class="title">Expériences</h3>
                                     <div class="row">
                                         <div class="timeline-box padd-15">
-                                            <div class="timeline shadox-dark">
-                                                <!-- Parcours item -->
+                                            <div class="timeline shadow-dark">
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2020 - 2022
+                                                        <i class="fa fa-calendar"></i> 2020 – 2022
                                                     </h3>
                                                     <h4 class="timeline-title">Membre de l'AMAVEC</h4>
-                                                    <p class="timeline-text">L’Association pour l’environnement,
-                                                        l’assainissement et un meilleur cadre de vie vise à protéger
-                                                        l’environnement, promouvoir le recyclage, sensibiliser à
-                                                        l’hygiène, améliorer le cadre de vie et mobiliser les citoyens,
+                                                    <p class="timeline-text">L'Association pour l'environnement,
+                                                        l'assainissement et un meilleur cadre de vie vise à protéger
+                                                        l'environnement, promouvoir le recyclage, sensibiliser à
+                                                        l'hygiène, améliorer le cadre de vie et mobiliser les citoyens,
                                                         surtout les jeunes, autour des enjeux écologiques.</p>
                                                     <p>Bamako, Mali</p>
                                                 </div>
-
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
                                                         <i class="fa fa-calendar"></i> 2024
                                                     </h3>
-                                                    <h4 class="timeline-title"> Bénévole</h4>
+                                                    <h4 class="timeline-title">Bénévole</h4>
                                                     <p class="timeline-text">
-                                                        Dans le cadre de mon engagement solidaire, j’ai participé à la
+                                                        Dans le cadre de mon engagement solidaire, j'ai participé à la
                                                         distribution de nourriture aux personnes démunies afin de lutter
                                                         contre la faim, soutenir les populations vulnérables avec
                                                         dignité et réduire le gaspillage alimentaire.
                                                     </p>
                                                     <p>Bamako, Mali</p>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
@@ -216,8 +188,8 @@
                     </div>
                 </div>
             </section>
-            <!-- Profil section Fin-->
-            <!-- Portfolio Début -->
+
+            <!-- ===== PORTFOLIO ===== -->
             <section class="portfolio section" id="portfolio">
                 <div class="container">
                     <div class="row">
@@ -225,54 +197,159 @@
                             <h2>Portfolio</h2>
                         </div>
                     </div>
+
+                    <!-- Sous-section Projets -->
                     <div class="row">
                         <div class="portfolio-heading padd-15">
                             <h2>Projets</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <!-- Portfolio item Début -->
                         <div class="portfolio-item padd-15">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-
-                                    <a href="salac.pdf" alt="Projet salac" target="_blank" class="projet-img">
-                                        <img src="ampere.png" alt="Projet 2025">
+                                    <a href="salac.pdf" target="_blank" class="projet-img">
+                                        <img src="ampere.png" alt="Projet SALAC 2025">
                                     </a>
                                     <h3>SALAC</h3>
                                 </div>
                             </div>
                         </div>
-                        <!-- Portfolio item Fin -->
-                        <!-- Portfolio item Début -->
                         <div class="portfolio-item padd-15">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <a href="kss.pdf" alt="Projet salac" target="_blank" class="projet-img">
-                                        <img src="kss.png" alt="Projet 2024">
+                                    <a href="kss.pdf" target="_blank" class="projet-img">
+                                        <img src="kss.png" alt="Projet KSS Design 2024">
                                     </a>
                                     <h3>KSS DESIGN</h3>
                                 </div>
                             </div>
                         </div>
-                        <!-- Portfolio item Fin -->
-                        <!-- Portfolio item Début -->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <a href="presentation_stage.pdf" alt="Stage" target="_blank" class="projet-img">
-                                        <img src="stage.png" alt="Stage 2025">
+
+                    </div>
+
+                    <!-- ===== Sous-section Stages ===== -->
+                    <div class="row">
+                        <div class="portfolio-heading padd-15 stage-heading">
+                            <h2>Mes Stages</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <!-- Stage INA -->
+                        <div class="stage-block padd-15">
+                            <div class="stage-card shadow-dark">
+                                <div class="stage-img-banner">
+                                    <a href="presentation_stage.pdf" target="_blank">
+                                        <img src="logoIna.png" alt="Stage ANKA Digital 2025">
                                     </a>
-                                    <h3>NaturAfro</h3>
+                                </div>
+                                <div class="stage-header">
+                                    <div class="stage-icon">
+                                        <i class="fa fa-building"></i>
+                                    </div>
+                                    <div class="stage-header-info">
+                                        <h3 class="stage-company">Institut National de l'Audiovisuel</h3>
+                                        <span class="stage-meta">
+                                            <i class="fa fa-calendar"></i>
+                                            Jan. 2026 – Fév. 2026
+                                        </span>
+                                        <span class="stage-meta">
+                                            <i class="fa fa-briefcase"></i>
+                                            Développeur Fullstack (Stage)
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="stage-body">
+                                    <h4 class="stage-role">
+                                        <i class="fa fa-code"></i>
+                                        Migration de données & déploiement Docker
+                                    </h4>
+                                    <ul class="stage-missions">
+                                        <li><i class="fa fa-chevron-right"></i> Développement d'une application Java de
+                                            migration de données Excel historiques vers une base SQLite</li>
+                                        <li><i class="fa fa-chevron-right"></i> Analyse, traitement et fiabilisation des
+                                            données avec validation par tests automatisés</li>
+                                        <li><i class="fa fa-chevron-right"></i> Génération de rapports de migration et
+                                            déploiement dans un conteneur Docker sous Ubuntu (WSL)</li>
+                                        <li><i class="fa fa-chevron-right"></i> Collaboration en équipe Agile et gestion
+                                            de versions via GitLab</li>
+                                    </ul>
+                                    <div class="stage-tags">
+                                        <span class="stage-tag">Java</span>
+                                        <span class="stage-tag">SQLite</span>
+                                        <span class="stage-tag">JDBC</span>
+                                        <span class="stage-tag">Spring Batch</span>
+                                        <span class="stage-tag">Docker</span>
+                                        <span class="stage-tag">SonarQube</span>
+                                        <span class="stage-tag">GitLab</span>
+                                        <span class="stage-tag">Regex</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Portfolio item Fin -->
+
+                        <!-- Stage ANKA Digital -->
+                        <div class="stage-block padd-15">
+                            <div class="stage-card shadow-dark">
+                                <div class="stage-img-banner">
+                                    <a href="presentation_stage.pdf" target="_blank">
+                                        <img src="stage.png" alt="Stage ANKA Digital 2025">
+                                    </a>
+                                </div>
+                                <div class="stage-header">
+                                    <div class="stage-icon">
+                                        <i class="fa fa-building"></i>
+                                    </div>
+                                    <div class="stage-header-info">
+                                        <h3 class="stage-company">ANKA Digital</h3>
+                                        <span class="stage-meta">
+                                            <i class="fa fa-calendar"></i>
+                                            Mai 2025 – Juin 2025
+                                        </span>
+                                        <span class="stage-meta">
+                                            <i class="fa fa-briefcase"></i>
+                                            Développeur Full Stack (Stage)
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="stage-body">
+                                    <h4 class="stage-role">
+                                        <i class="fa fa-code"></i>
+                                        Développement d'un site e-commerce
+                                    </h4>
+                                    <ul class="stage-missions">
+                                        <li><i class="fa fa-chevron-right"></i> Développement d'un site e-commerce :
+                                            conception, maquettes, arborescence</li>
+                                        <li><i class="fa fa-chevron-right"></i> Implémentation d'un panier d'achat et
+                                            d'un système de gestion de commandes</li>
+                                        <li><i class="fa fa-chevron-right"></i> Intégration Front-end : HTML, CSS,
+                                            Bootstrap ; Back-end : PHP/MySQL avec PDO</li>
+                                        <li><i class="fa fa-chevron-right"></i> Travail en autonomie avec rigueur et
+                                            esprit d'analyse</li>
+                                    </ul>
+                                    <div class="stage-tags">
+                                        <span class="stage-tag">HTML</span>
+                                        <span class="stage-tag">CSS</span>
+                                        <span class="stage-tag">Bootstrap</span>
+                                        <span class="stage-tag">PHP</span>
+                                        <span class="stage-tag">MySQL</span>
+                                        <span class="stage-tag">PDO</span>
+                                    </div>
+                                </div>
+                                <div class="stage-footer">
+                                    <a href="presentation_stage.pdf" class="btn stage-btn" target="_blank">
+                                        <i class="fa fa-file-pdf"></i> Voir la présentation
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
-            <!-- Portfolio Fin -->
-            <!-- Compétences section Début -->
+
+            <!-- ===== COMPÉTENCES ===== -->
             <section class="competences-section section" id="competences">
                 <div class="container">
                     <div class="row">
@@ -281,78 +358,162 @@
                         </div>
                     </div>
                     <div class="row">
-                        <!-- Compétences item Début-->
                         <div class="service-item padd-15">
                             <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-file-code"></i>
-                                </div>
+                                <div class="icon"><i class="fa fa-file-code"></i></div>
                                 <h4>Langages</h4>
                                 <p>PHP, Python, C#, Java, Javascript</p>
                             </div>
                         </div>
-                        <!-- Compétences item Fin-->
-                        <!-- Compétences item Début-->
                         <div class="service-item padd-15">
                             <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-globe-americas"></i>
-                                </div>
+                                <div class="icon"><i class="fa fa-globe-americas"></i></div>
                                 <h4>Langages Web</h4>
                                 <p>HTML, CSS, Bootstrap</p>
                             </div>
                         </div>
-                        <!-- Compétences item Fin-->
-                        <!-- Compétences item Début-->
                         <div class="service-item padd-15">
                             <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-cogs"></i>
-                                </div>
+                                <div class="icon"><i class="fa fa-cogs"></i></div>
                                 <h4>Logiciels</h4>
                                 <p>VS Code, Packet Tracer, VirtualBox</p>
                             </div>
                         </div>
-                        <!-- Compétences item Fin-->
-                        <!-- Compétences item Début-->
                         <div class="service-item padd-15">
                             <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-laptop-code"></i>
-                                </div>
+                                <div class="icon"><i class="fa fa-laptop-code"></i></div>
                                 <h4>Système</h4>
                                 <p>Windows, Linux</p>
                             </div>
                         </div>
-                        <!-- Compétences item Fin-->
-                        <!-- Compétences item Début-->
                         <div class="service-item padd-15">
                             <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-shield-alt"></i>
-                                </div>
+                                <div class="icon"><i class="fa fa-shield-alt"></i></div>
                                 <h4>Cybersécurité</h4>
-                                <p>PIA, RGPD, ANSII, CNIL</p>
+                                <p>PIA, RGPD, ANSSI, CNIL</p>
                             </div>
                         </div>
-                        <!-- Compétences item Fin-->
-                        <!-- Compétences item Début-->
                         <div class="service-item padd-15">
                             <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-database"></i>
-                                </div>
+                                <div class="icon"><i class="fa fa-database"></i></div>
                                 <h4>Data</h4>
-                                <p>SQL, XML, XSL, Json</p>
+                                <p>SQL, XML, XSL, JSON</p>
                             </div>
                         </div>
-                        <!-- Compétences item Fin-->
                     </div>
                 </div>
             </section>
-            <!-- Compétences section Fin -->
 
-            <!-- Contact section Début -->
+            <!-- ===== CERTIFICATIONS ===== -->
+            <section class="certifications section" id="certifications">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Certifications</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Certification ANSSI -->
+                        <div class="certif-item padd-15">
+                            <div class="certif-card shadow-dark">
+                                <div class="certif-header">
+                                    <div class="certif-icon">
+                                        <i class="fa fa-shield-alt"></i>
+                                    </div>
+                                    <div class="certif-info">
+                                        <h4 class="certif-title">MOOC SecNumacadémie</h4>
+                                        <span class="certif-org">ANSSI — Agence Nationale de la Sécurité des Systèmes
+                                            d'Information</span>
+                                        <span class="certif-date"><i class="fa fa-calendar"></i> 20 septembre
+                                            2025</span>
+                                    </div>
+                                    <a href="Attestation_MOOC_ANSSI.pdf" class="certif-link" target="_blank"
+                                        title="Voir l'attestation">
+                                        <i class="fa fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                                <div class="certif-body">
+                                    <p class="certif-desc">Formation complète en cybersécurité — 4 modules validés avec
+                                        succès</p>
+                                    <div class="certif-modules">
+                                        <div class="certif-module">
+                                            <span class="module-name">Panorama de la SSI</span>
+                                            <div class="module-score-bar">
+                                                <div class="module-score-fill" style="width: 90%"></div>
+                                            </div>
+                                            <span class="module-score">90%</span>
+                                        </div>
+                                        <div class="certif-module">
+                                            <span class="module-name">Sécurité de l'authentification</span>
+                                            <div class="module-score-bar">
+                                                <div class="module-score-fill" style="width: 84%"></div>
+                                            </div>
+                                            <span class="module-score">84%</span>
+                                        </div>
+                                        <div class="certif-module">
+                                            <span class="module-name">Sécurité sur Internet</span>
+                                            <div class="module-score-bar">
+                                                <div class="module-score-fill" style="width: 86%"></div>
+                                            </div>
+                                            <span class="module-score">86%</span>
+                                        </div>
+                                        <div class="certif-module">
+                                            <span class="module-name">Sécurité du poste de travail et nomadisme</span>
+                                            <div class="module-score-bar">
+                                                <div class="module-score-fill" style="width: 82%"></div>
+                                            </div>
+                                            <span class="module-score">82%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== CERTIFICATIONS FIN ===== -->
+
+            <!-- ===== RECOMMANDATIONS ===== -->
+            <section class="recommandations section" id="recommandations">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Recommandations</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Recommandation Mounir Abid -->
+                        <div class="reco-item padd-15">
+                            <div class="reco-card shadow-dark">
+                                <div class="reco-quote-icon">
+                                    <i class="fa fa-quote-left"></i>
+                                </div>
+                                <p class="reco-text">
+                                    Durant sa période de stage, elle a pu se familiariser avec notre environnement
+                                    technique et contribuer au développement d'un script d'import de données.
+                                    Elle s'est montrée respectueuse et à l'écoute. Elle a également démontré
+                                    une bonne capacité d'adaptation face à des outils et processus qu'elle découvrait.
+                                    Je suis convaincu que cette première expérience professionnelle lui sera bénéfique
+                                    pour la suite de son parcours.
+                                </p>
+                                <div class="reco-footer">
+                                    <div class="reco-avatar">
+                                        <span>MA</span>
+                                    </div>
+                                    <div class="reco-author">
+                                        <strong>Mounir Abid</strong>
+                                        <span>Responsable Chapter Développements</span>
+                                        <span>Institut National de l'Audiovisuel — Direction Data & Technologies</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== RECOMMANDATIONS FIN ===== -->
+
+            <!-- ===== CONTACT ===== -->
             <section class="contact section" id="contact">
                 <div class="container">
                     <div class="row">
@@ -360,72 +521,38 @@
                             <h2>Contact</h2>
                         </div>
                     </div>
-                    <h3 class="contact-title padd-15"> Avez-vous des questions ?</h3>
+                    <h3 class="contact-title padd-15">Avez-vous des questions ?</h3>
                     <h4 class="contact-sub-title padd-15">Je suis à votre service</h4>
                     <div class="row">
-                        <!-- Contact info item Début -->
                         <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="bi bi-linkedin"></i></div>
+                            <div class="icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
                             <h4>Contactez-moi sur</h4>
-                            <a href="https://www.linkedin.com/in/sokona-sidib%C3%A9-311469373/">Linkedin </a>
+                            <a href="https://www.linkedin.com/in/sokona-sidib%C3%A9-311469373/"
+                                target="_blank">LinkedIn</a>
+                        </div>
+                        <div class="contact-info-item padd-15">
+                            <div class="icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <h4>Envoyez-moi un email</h4>
+                            <a href="mailto:sokonasidibe717@gmail.com">sokonasidibe717@gmail.com</a>
                         </div>
                     </div>
-                    <h3 class="contact-title padd-15"> Envoyez-moi un email</h3>
-                    <!-- <h4 class="contact-sub-title padd-15">Je suis à votre service</h4> -->
-                    <!-- Formulaire Contact Début -->
-                    <div class="row">
-                        <div class="contact-form padd-15">
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Nom">
-                                    </div>
-                                </div>
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Message">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <a href="mailto:sidibe-s@saint-louis29.net"><button type="submit"
-                                                class="btn">Envoyer</button></a>
 
-                                    </div>
-                                    <p>
-                                    <p>Copyright : © 2026 Sokona Sidibé. Tous droits réservés.</p>
-
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
+                    <div class="footer-copy padd-15">
+                        <p>Copyright © 2026 Sokona Sidibé. Tous droits réservés.</p>
                     </div>
-                    <!-- Formulaire Contact Fin -->
                 </div>
             </section>
-            <!-- Contact section Fin -->
+
         </div>
         <!-- Main Content Fin -->
-
     </div>
-    <!-- Main Container Fin-->
+    <!-- Main Container Fin -->
 
-    <!-- Fichier JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
-        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
-
 </body>
 
 </html>

@@ -1,7 +1,14 @@
-// Fermer et ouvrir la barre latérale
+// ============================================
+// SIDEBAR TOGGLE
+// ============================================
 const navToggle = document.querySelector(".nav-toggler");
 const aside = document.querySelector(".aside");
 const mainContent = document.querySelector(".main-content");
+
+// Overlay pour fermer le menu en cliquant dehors (mobile)
+const overlay = document.createElement("div");
+overlay.classList.add("nav-overlay");
+document.body.appendChild(overlay);
 
 if (navToggle) {
   navToggle.addEventListener("click", () => {
@@ -9,35 +16,44 @@ if (navToggle) {
   });
 }
 
+overlay.addEventListener("click", () => {
+  if (aside.classList.contains("open")) {
+    asideToggle();
+  }
+});
+
 function asideToggle() {
   aside.classList.toggle("open");
   navToggle.classList.toggle("open");
   mainContent.classList.toggle("open");
+  overlay.classList.toggle("active");
 }
 
-// Typing animation
+// ============================================
+// TYPING ANIMATION
+// ============================================
 if (document.querySelector(".typing")) {
   var typed = new Typed(".typing", {
-    strings: ["étudiante en BTS SIO", "à la recherche d'une alternance"],
+    strings: ["étudiante en BTS SIO", "développeuse fullstack"],
     typeSpeed: 100,
-    BackSpeed: 60,
+    backSpeed: 60, // Corrigé : BackSpeed → backSpeed
     loop: true,
   });
 }
 
-// Active menu lors du scroll et fermer menu au clic sur mobile
+// ============================================
+// ACTIVE MENU AU SCROLL + FERMETURE MOBILE
+// ============================================
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".section");
   const navLinks = document.querySelectorAll(".nav li a");
 
-  // Navigation au scroll
+  // Highlight du lien actif selon la section visible
   window.addEventListener("scroll", () => {
     let current = "";
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-
       if (window.scrollY >= sectionTop - 300) {
         current = section.getAttribute("id");
       }
@@ -54,15 +70,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fermer le menu au clic sur un lien (mobile)
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      // Si on est sur mobile (menu ouvert)
-      if (window.innerWidth <= 1199) {
+      if (window.innerWidth <= 1199 && aside.classList.contains("open")) {
         asideToggle();
       }
     });
   });
 });
 
-// Empêcher le comportement par défaut des liens ancres
+// ============================================
+// SCROLL FLUIDE SUR LES ANCRES
+// ============================================
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -72,25 +89,25 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
+      const offset = window.innerWidth <= 1199 ? 70 : 50;
       window.scrollTo({
-        top: targetElement.offsetTop - 50,
+        top: targetElement.offsetTop - offset,
         behavior: "smooth",
       });
     }
   });
 });
 
-// Gérer le redimensionnement de la fenêtre
+// ============================================
+// FERMER LE MENU AU REDIMENSIONNEMENT
+// ============================================
 window.addEventListener("resize", () => {
-  // Si on repasse en desktop et que le menu est ouvert, le fermer
   if (window.innerWidth > 1199 && aside.classList.contains("open")) {
     aside.classList.remove("open");
     navToggle.classList.remove("open");
     mainContent.classList.remove("open");
+    overlay.classList.remove("active");
   }
 });
 
-// Chargement initial
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("Portfolio chargé avec succès!");
-});
+console.log("Portfolio chargé avec succès !");
