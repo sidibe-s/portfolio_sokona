@@ -1,0 +1,813 @@
+CRITICAL - 2026-04-24 08:27:44 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "mysqli" is not loaded. Install and enable it to use "MySQLi" driver.
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\Database.php on line 182.
+ 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('MySQLi')
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\Connexion.php(20): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Connexion->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+CRITICAL - 2026-04-24 08:28:20 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "mysqli" is not loaded. Install and enable it to use "MySQLi" driver.
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\Database.php on line 182.
+ 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('MySQLi')
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\Connexion.php(20): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Connexion->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-24 08:31:36 --> Error connecting to the database: mysqli_sql_exception: Plugin 'mysql_native_password' is not loaded in C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'myroot', Object(SensitiveParameterValue), 'gsbfrais-2025-a...', 3306, '', 0)
+#1 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\app\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\app\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+#6 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\rewrite.php(44): require_once('C:\\Users\\mathi\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Plugin 'mysql_native_password' is not loaded in C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\app\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\app\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+#5 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#6 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#7 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\rewrite.php(44): require_once('C:\\Users\\mathi\\...')
+#12 {main}
+CRITICAL - 2026-04-24 08:31:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Plugin 'mysql_native_password' is not loaded
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `infos_utilisateurs`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-24 08:39:27 --> Error connecting to the database: mysqli_sql_exception: Plugin 'mysql_native_password' is not loaded in C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'myroot', Object(SensitiveParameterValue), 'gsbfrais-2025-a...', 3306, '', 0)
+#1 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\app\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\app\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+#6 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\rewrite.php(44): require_once('C:\\Users\\mathi\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Plugin 'mysql_native_password' is not loaded in C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\app\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\app\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+#5 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#6 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#7 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\mathi\Desktop\Outils\ecole\GSB\GSBFrais\system\rewrite.php(44): require_once('C:\\Users\\mathi\\...')
+#12 {main}
+CRITICAL - 2026-04-24 08:39:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Plugin 'mysql_native_password' is not loaded
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `infos_utilisateurs`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:44:46 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 51.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:45:04 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 51.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:45:06 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 51.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:46:41 --> Error: Call to undefined function App\Controllers\curl_exec()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 50.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:47:37 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 51.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:47:38 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 51.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:47:39 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 51.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:47:40 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 51.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:47:41 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 51.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:48:29 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 51.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:48:30 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 51.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:49:06 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 51.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:51:29 --> Error: Call to undefined function curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(38): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:51:29 --> Error: Call to undefined function curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(38): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:51:30 --> Error: Call to undefined function curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(38): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:51:30 --> Error: Call to undefined function curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(38): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:51:30 --> Error: Call to undefined function curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(38): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:51:31 --> Error: Call to undefined function curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(38): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:51:31 --> Error: Call to undefined function curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(38): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:51:31 --> Error: Call to undefined function curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(38): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:51:32 --> Error: Call to undefined function curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(38): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:52:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:52:35 --> Error: Call to undefined function curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(38): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 08:52:36 --> Error: Call to undefined function curl_init()
+[Method: GET, Route: accueil]
+in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(38): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-04-24 08:52:49 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-04-24 08:52:52 --> [DEPRECATED] App\Libraries\Gsb_lib::get_annee_mois(): Implicitly marking parameter $date as nullable is deprecated, the explicit nullable type must be used instead in APPPATH\Libraries\Gsb_lib.php on line 38.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(315): include_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\app\\Libraries\\Gsb_lib.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Libraries\\Gsb_lib')
+ 4 APPPATH\Controllers\RembourserFrais.php(25): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Libraries\\Gsb_lib')
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\RembourserFrais->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 08:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 08:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-04-24 08:53:02 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:01:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-04-24 09:02:48 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-04-24 09:04:51 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:10:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "fraishorsforfait_table_suivi.php"
+[Method: GET, Route: suiviFicheFrais]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('fraishorsforfait_table_suivi.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('fraishorsforfait_table_suivi', [], true)
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(147): view('fraishorsforfait_table_suivi', [...])
+ 4 APPPATH\Controllers\SuiviFicheFrais.php(32): App\Controllers\SuiviFicheFrais->commun()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:12:59 --> ErrorException: Undefined array key "idFraisHorsForfait"
+[Method: POST, Route: suiviFicheFrais/selectionner]
+in APPPATH\Views\fraishorsforfait_table_suivi.php on line 31.
+ 1 APPPATH\Views\fraishorsforfait_table_suivi.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idFraisHorsForfait"', 'C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\app\\Views\\fraishorsforfait_table_suivi.php', 31)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\app\\Views\\fraishorsforfait_table_suivi.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('fraishorsforfait_table_suivi', [], true)
+ 5 APPPATH\Controllers\SuiviFicheFrais.php(147): view('fraishorsforfait_table_suivi', [...])
+ 6 APPPATH\Controllers\SuiviFicheFrais.php(38): App\Controllers\SuiviFicheFrais->commun()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->selectionner()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:29:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:45:37 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: suiviFicheFrais/reporter_fraishorsforfait/2217/634]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(65): CodeIgniter\Model->__call('get_infos_fiche_et_visiteur', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->reporter_fraishorsforfait('2217', '634')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:45:39 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "fraisforfait_edit_suivi.php"
+[Method: GET, Route: suiviFicheFrais/reporter_fraishorsforfait/2217/634]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('fraisforfait_edit_suivi.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('fraisforfait_edit_suivi', [], true)
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(171): view('fraisforfait_edit_suivi', [...])
+ 4 APPPATH\Controllers\SuiviFicheFrais.php(85): App\Controllers\SuiviFicheFrais->commun()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->reporter_fraishorsforfait('2217', '634')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:45:40 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: suiviFicheFrais/reporter_fraishorsforfait/2217/634]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(65): CodeIgniter\Model->__call('get_infos_fiche_et_visiteur', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->reporter_fraishorsforfait('2217', '634')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:45:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "fraisforfait_edit_suivi.php"
+[Method: GET, Route: suiviFicheFrais/reporter_fraishorsforfait/2217/634]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('fraisforfait_edit_suivi.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('fraisforfait_edit_suivi', [], true)
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(171): view('fraisforfait_edit_suivi', [...])
+ 4 APPPATH\Controllers\SuiviFicheFrais.php(85): App\Controllers\SuiviFicheFrais->commun()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->reporter_fraishorsforfait('2217', '634')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:45:41 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: suiviFicheFrais/reporter_fraishorsforfait/2217/634]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(65): CodeIgniter\Model->__call('get_infos_fiche_et_visiteur', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->reporter_fraishorsforfait('2217', '634')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:45:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "fraisforfait_edit_suivi.php"
+[Method: GET, Route: suiviFicheFrais/reporter_fraishorsforfait/2217/634]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('fraisforfait_edit_suivi.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('fraisforfait_edit_suivi', [], true)
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(171): view('fraisforfait_edit_suivi', [...])
+ 4 APPPATH\Controllers\SuiviFicheFrais.php(85): App\Controllers\SuiviFicheFrais->commun()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->reporter_fraishorsforfait('2217', '634')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:45:42 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: suiviFicheFrais/reporter_fraishorsforfait/2217/634]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(65): CodeIgniter\Model->__call('get_infos_fiche_et_visiteur', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->reporter_fraishorsforfait('2217', '634')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:45:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:45:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "fraisforfait_edit_suivi.php"
+[Method: GET, Route: suiviFicheFrais/reporter_fraishorsforfait/2217/634]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('fraisforfait_edit_suivi.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('fraisforfait_edit_suivi', [], true)
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(171): view('fraisforfait_edit_suivi', [...])
+ 4 APPPATH\Controllers\SuiviFicheFrais.php(85): App\Controllers\SuiviFicheFrais->commun()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->reporter_fraishorsforfait('2217', '634')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:45:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:45:43 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: suiviFicheFrais/reporter_fraishorsforfait/2217/634]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(65): CodeIgniter\Model->__call('get_infos_fiche_et_visiteur', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->reporter_fraishorsforfait('2217', '634')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:45:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "fraisforfait_edit_suivi.php"
+[Method: POST, Route: suiviFicheFrais/selectionner]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('fraisforfait_edit_suivi.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('fraisforfait_edit_suivi', [], true)
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(171): view('fraisforfait_edit_suivi', [...])
+ 4 APPPATH\Controllers\SuiviFicheFrais.php(38): App\Controllers\SuiviFicheFrais->commun()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->selectionner()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:45:48 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: suiviFicheFrais/reporter_fraishorsforfait/2263/648]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(65): CodeIgniter\Model->__call('get_infos_fiche_et_visiteur', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->reporter_fraishorsforfait('2263', '648')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:45:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:45:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:45:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-04-24 09:45:54 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH\Controllers\Accueil.php on line 57.
+ 1 APPPATH\Controllers\Accueil.php(32): App\Controllers\Accueil->getRssFlux()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accueil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accueil))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:45:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:45:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "fraisforfait_edit_suivi.php"
+[Method: GET, Route: suiviFicheFrais]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('fraisforfait_edit_suivi.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('fraisforfait_edit_suivi', [], true)
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(171): view('fraisforfait_edit_suivi', [...])
+ 4 APPPATH\Controllers\SuiviFicheFrais.php(32): App\Controllers\SuiviFicheFrais->commun()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+WARNING - 2026-04-24 09:49:12 --> [DEPRECATED] App\Libraries\Gsb_lib::get_annee_mois(): Implicitly marking parameter $date as nullable is deprecated, the explicit nullable type must be used instead in APPPATH\Libraries\Gsb_lib.php on line 38.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(315): include_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\app\\Libraries\\Gsb_lib.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Libraries\\Gsb_lib')
+ 4 APPPATH\Controllers\SuiviFicheFrais.php(23): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Libraries\\Gsb_lib')
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\SuiviFicheFrais->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:53:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:54:41 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: suiviFicheFrais/reporter_fraishorsforfait/2263/648]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(70): CodeIgniter\Model->__call('get_infos_fiche_et_visiteur', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->reporter_fraishorsforfait('2263', '648')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-24 09:56:08 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: suiviFicheFrais/reporter_fraishorsforfait/2217/634]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\SuiviFicheFrais.php(70): CodeIgniter\Model->__call('get_infos_fiche_et_visiteur', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SuiviFicheFrais->reporter_fraishorsforfait('2217', '634')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuiviFicheFrais))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\mathi\\Desktop\\Outils\\ecole\\GSB\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-24 09:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 09:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-24 10:00:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

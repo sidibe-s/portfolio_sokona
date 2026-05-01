@@ -1,0 +1,37 @@
+<?php helper('form'); ?>
+
+<div id="sousContenu">
+
+    <?= form_open('suiviFicheFrais/valider_maj_fraisforfait') ?>
+
+    <input type="hidden" name="idFiche" value="<?= esc($idFiche) ?>">
+
+    <div class="corpsForm">
+        <?php foreach ($fraisforfait as $unff): ?>
+            <p>
+                <?= form_label($unff['libelle'] . ' : ', 'nb' . $unff['idfraisforfait']) ?>
+                <?= form_input([
+                    'type'      => 'number',
+                    'name'      => 'lesFrais[' . $unff['idfraisforfait'] . ']',
+                    'id'        => 'nb' . $unff['idfraisforfait'],
+                    'maxlength' => '4',
+                    'size'      => '4',
+                    'min'       => '0',
+                    'max'       => '1000',
+                    'value'     => old('lesFrais[' . $unff['idfraisforfait'] . ']', $unff['quantite']),
+                    'style'     => 'text-align: right'
+                ]) ?>
+            </p>
+        <?php endforeach; ?>
+    </div>
+
+    <div class="piedForm">
+        <p>
+            <?= form_submit('btnValider', 'Valider', ['class' => 'bouton']) ?>
+            <?= form_reset('btnEffacer', 'Effacer', ['class' => 'bouton']) ?>
+        </p>
+    </div>
+
+    <?= form_close() ?>
+
+</div>

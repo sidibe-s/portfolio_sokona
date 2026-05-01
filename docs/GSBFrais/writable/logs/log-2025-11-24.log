@@ -1,0 +1,561 @@
+DEBUG - 2025-11-24 13:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 13:19:07 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'gsbfrais2025-ap' in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'myroot', Object(SensitiveParameterValue), 'gsbfrais2025-ap', 3306, '', 0)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefr...', Array, false)
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(NULL, '2025', '11')
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'gsbfrais2025-ap' in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefr...', Array, false)
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(NULL, '2025', '11')
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#12 {main}
+CRITICAL - 2025-11-24 13:19:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'gsbfrais2025-ap'
+[Method: GET, Route: gererfrais]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2025-11-24 13:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 13:40:36 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'gsbfrais2025-ap' in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'myroot', Object(SensitiveParameterValue), 'gsbfrais2025-ap', 3306, '', 0)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefr...', Array, false)
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(NULL, '2025', '11')
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'gsbfrais2025-ap' in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefr...', Array, false)
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(NULL, '2025', '11')
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#12 {main}
+CRITICAL - 2025-11-24 13:40:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'gsbfrais2025-ap'
+[Method: GET, Route: gererfrais]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2025-11-24 13:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 13:40:59 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'gsbfrais2025-ap' in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'myroot', Object(SensitiveParameterValue), 'gsbfrais2025-ap', 3306, '', 0)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefr...', Array, false)
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(NULL, '2025', '11')
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'gsbfrais2025-ap' in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefr...', Array, false)
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(NULL, '2025', '11')
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#12 {main}
+CRITICAL - 2025-11-24 13:40:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'gsbfrais2025-ap'
+[Method: GET, Route: gererfrais]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `fichefrais`.`idFiche`, `fichefrais`.`idEtat`
+FROM `fichefrais`
+WHERE `fichefrais`.`idUtilisateur` IS NULL
+AND `fichefrais`.`annee` = :fichefrais.annee:
+AND `fichefrais`.`mois` = :fichefrais.mois:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Gererfrais.php(29): App\Models\GsbModel->get_id_ficheFrais(null, '2025', '11')
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Gererfrais->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2025-11-24 13:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 13:41:12 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'gsbfrais2025-ap' in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'myroot', Object(SensitiveParameterValue), 'gsbfrais2025-ap', 3306, '', 0)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_utilisateur('lvillachane', 'jux7g')
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'gsbfrais2025-ap' in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_utilisateur('lvillachane', 'jux7g')
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#12 {main}
+CRITICAL - 2025-11-24 13:41:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'gsbfrais2025-ap'
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `infos_utilisateurs`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Connexion.php(52): App\Models\GsbModel->get_infos_utilisateur('lvillachane', 'jux7g')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2025-11-24 13:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 13:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 13:56:33 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::call_function()
+[Method: GET, Route: gererfrais/supp_fraishorsforfait/2030]
+in APPPATH\Models\GsbModel.php on line 207.
+ 1 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2025-11-24 13:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 13:58:33 --> mysqli_sql_exception: Incorrect number of arguments for PROCEDURE gsbfrais-2025-ap.supprimer_frais_hors_forfait_ps; expected 1, got 0 in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL supprimer_...', 0)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL supprimer_...')
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL supprimer_...')
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_...', '2030')
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#12 {main}
+CRITICAL - 2025-11-24 13:58:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Incorrect number of arguments for PROCEDURE gsbfrais-2025-ap.supprimer_frais_hors_forfait_ps; expected 1, got 0
+[Method: GET, Route: gererfrais/supp_fraishorsforfait/2030]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_frais_hors_forfait_ps', '2030')
+ 2 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+CRITICAL - 2025-11-24 13:58:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Incorrect number of arguments for PROCEDURE gsbfrais-2025-ap.supprimer_frais_hors_forfait_ps; expected 1, got 0
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL supprimer_frais_hors_forfait_ps')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL supprimer_frais_hors_forfait_ps')
+ 3 APPPATH\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_frais_hors_forfait_ps', '2030')
+ 4 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+CRITICAL - 2025-11-24 13:58:34 --> [Caused by] mysqli_sql_exception: Incorrect number of arguments for PROCEDURE gsbfrais-2025-ap.supprimer_frais_hors_forfait_ps; expected 1, got 0
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL supprimer_frais_hors_forfait_ps', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL supprimer_frais_hors_forfait_ps')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL supprimer_frais_hors_forfait_ps')
+ 4 APPPATH\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_frais_hors_forfait_ps', '2030')
+ 5 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2025-11-24 13:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 13:59:00 --> TypeError: Unsupported operand types: string + string
+[Method: GET, Route: gererfrais/supp_fraishorsforfait/2030]
+in APPPATH\Models\GsbModel.php on line 207.
+ 1 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2025-11-24 13:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 13:59:21 --> mysqli_sql_exception: Incorrect number of arguments for PROCEDURE gsbfrais-2025-ap.supprimer_frais_hors_forfait_ps; expected 1, got 0 in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL supprimer_...', 0)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL supprimer_...')
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL supprimer_...')
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_...', '2030')
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#12 {main}
+CRITICAL - 2025-11-24 13:59:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Incorrect number of arguments for PROCEDURE gsbfrais-2025-ap.supprimer_frais_hors_forfait_ps; expected 1, got 0
+[Method: GET, Route: gererfrais/supp_fraishorsforfait/2030]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_frais_hors_forfait_ps', '2030')
+ 2 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+CRITICAL - 2025-11-24 13:59:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Incorrect number of arguments for PROCEDURE gsbfrais-2025-ap.supprimer_frais_hors_forfait_ps; expected 1, got 0
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL supprimer_frais_hors_forfait_ps')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL supprimer_frais_hors_forfait_ps')
+ 3 APPPATH\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_frais_hors_forfait_ps', '2030')
+ 4 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+CRITICAL - 2025-11-24 13:59:21 --> [Caused by] mysqli_sql_exception: Incorrect number of arguments for PROCEDURE gsbfrais-2025-ap.supprimer_frais_hors_forfait_ps; expected 1, got 0
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL supprimer_frais_hors_forfait_ps', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL supprimer_frais_hors_forfait_ps')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL supprimer_frais_hors_forfait_ps')
+ 4 APPPATH\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_frais_hors_forfait_ps', '2030')
+ 5 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2025-11-24 14:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 14:03:16 --> TypeError: Unsupported operand types: string + string
+[Method: GET, Route: gererfrais/supp_fraishorsforfait/2030]
+in APPPATH\Models\GsbModel.php on line 207.
+ 1 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2025-11-24 14:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 14:03:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL supprimer_...', 0)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL supprimer_...')
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL supprimer_...')
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_...', '2030')
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#12 {main}
+CRITICAL - 2025-11-24 14:03:38 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+[Method: GET, Route: gererfrais/supp_fraishorsforfait/2030]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_frais_hors_forfait_ps(', '2030')
+ 2 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+CRITICAL - 2025-11-24 14:03:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL supprimer_frais_hors_forfait_ps(')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL supprimer_frais_hors_forfait_ps(')
+ 3 APPPATH\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_frais_hors_forfait_ps(', '2030')
+ 4 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+CRITICAL - 2025-11-24 14:03:38 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL supprimer_frais_hors_forfait_ps(', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL supprimer_frais_hors_forfait_ps(')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL supprimer_frais_hors_forfait_ps(')
+ 4 APPPATH\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_frais_hors_forfait_ps(', '2030')
+ 5 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2025-11-24 14:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 14:04:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`' at line 1 in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL supprimer_...', 0)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL supprimer_...')
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL supprimer_...')
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_...', '2030', true)
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#12 {main}
+CRITICAL - 2025-11-24 14:04:34 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`' at line 1
+[Method: GET, Route: gererfrais/supp_fraishorsforfait/2030]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_frais_hors_forfait_ps(`', '2030', true)
+ 2 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+CRITICAL - 2025-11-24 14:04:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL supprimer_frais_hors_forfait_ps(`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL supprimer_frais_hors_forfait_ps(`')
+ 3 APPPATH\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_frais_hors_forfait_ps(`', '2030', true)
+ 4 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+CRITICAL - 2025-11-24 14:04:34 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL supprimer_frais_hors_forfait_ps(`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL supprimer_frais_hors_forfait_ps(`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL supprimer_frais_hors_forfait_ps(`')
+ 4 APPPATH\Models\GsbModel.php(207): CodeIgniter\Database\BaseConnection->query('CALL supprimer_frais_hors_forfait_ps(`', '2030', true)
+ 5 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2025-11-24 14:07:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 14:07:38 --> mysqli_sql_exception: PROCEDURE gsbfrais-2025-ap.sp_insert_user does not exist in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_insert_...', 0)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_insert_...')
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_insert_...')
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(208): CodeIgniter\Database\BaseConnection->query('CALL sp_insert_...', Array)
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#12 {main}
+CRITICAL - 2025-11-24 14:07:38 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE gsbfrais-2025-ap.sp_insert_user does not exist
+[Method: GET, Route: gererfrais/supp_fraishorsforfait/2030]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Models\GsbModel.php(208): CodeIgniter\Database\BaseConnection->query('CALL sp_insert_user(?)', [...])
+ 2 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+CRITICAL - 2025-11-24 14:07:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE gsbfrais-2025-ap.sp_insert_user does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_insert_user(\'2030\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_insert_user(\'2030\')')
+ 3 APPPATH\Models\GsbModel.php(208): CodeIgniter\Database\BaseConnection->query('CALL sp_insert_user(?)', [...])
+ 4 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+CRITICAL - 2025-11-24 14:07:38 --> [Caused by] mysqli_sql_exception: PROCEDURE gsbfrais-2025-ap.sp_insert_user does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_insert_user(\'2030\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_insert_user(\'2030\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_insert_user(\'2030\')')
+ 4 APPPATH\Models\GsbModel.php(208): CodeIgniter\Database\BaseConnection->query('CALL sp_insert_user(?)', [...])
+ 5 APPPATH\Controllers\Gererfrais.php(112): App\Models\GsbModel->supprimer_frais_hors_forfait('2030')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gererfrais->supprimer_fraishorsforfait('2030')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gererfrais))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2025-11-24 14:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 14:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 14:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 14:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 14:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 14:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 14:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 14:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 14:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 14:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 14:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 14:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 14:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

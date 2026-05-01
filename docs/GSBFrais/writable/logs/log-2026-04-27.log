@@ -1,0 +1,203 @@
+DEBUG - 2026-04-27 16:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-27 16:08:58 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'gsbfrais-2025-a...', 3306, '', 0)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#12 {main}
+CRITICAL - 2026-04-27 16:08:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `infos_utilisateurs`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+ERROR - 2026-04-27 16:11:24 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'gsbfrais-2025-a...', 3306, '', 0)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#12 {main}
+CRITICAL - 2026-04-27 16:11:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `infos_utilisateurs`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+ERROR - 2026-04-27 16:14:49 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'gsbfrais-2025-a...', 3306, '', 0)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#4 Z:\BTS2Bis\Ap groupe\GSBFrais\app\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+#5 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+#6 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+#7 Z:\BTS2Bis\Ap groupe\GSBFrais\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 Z:\BTS2Bis\Ap groupe\GSBFrais\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 Z:\BTS2Bis\Ap groupe\GSBFrais\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 Z:\BTS2Bis\Ap groupe\GSBFrais\system\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap g...')
+#12 {main}
+CRITICAL - 2026-04-27 16:14:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+[Method: POST, Route: connexion/valider]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `infos_utilisateurs`
+WHERE `login` = :login:
+AND `mdp` = :mdp:', [...], false)
+ 3 APPPATH\Models\GsbModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Connexion.php(62): App\Models\GsbModel->get_infos_utilisateur('Ddupont', 'Azerty123*')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Connexion->valider()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('Z:\\BTS2Bis\\Ap groupe\\GSBFrais\\public\\index.php')
+DEBUG - 2026-04-27 16:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:29:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:46:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:53:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-27 16:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
